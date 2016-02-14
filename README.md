@@ -26,13 +26,14 @@ require "logging/appenders/gcl"
 
 Logging.init(Logging::Appenders::GoogleCloudLogging::SEVERITY_NAMES)
 logger = Logging::Logger.new("Dronejob")
-logger.add_appenders(Logging.appenders.gcl 'Google Cloud Logging', 
+logger.add_appenders(Logging.appenders.gcl('Google Cloud Logging', 
   project_id: "project-id",
   log_name: "log-name", 
   resource_type: "gce_instance",
   resource_labels: {"instance_id" => "instance-id", "zone" => "us-central1-b"}, 
   buffer_size: '3',
   immediate_at: 'error, fatal'
+))
 
 logger.debug("debug message")
 logger.info("info message")

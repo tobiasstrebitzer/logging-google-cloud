@@ -41,7 +41,7 @@ module Logging
       end
       
       def resource
-        gcloud_loggging.resource(@resource_type, @resource_labels)
+        gcloud_logging.resource(@resource_type, @resource_labels)
       end
 
       def close( *args )
@@ -87,7 +87,7 @@ module Logging
       end
       
       def send_entries(entries)
-        gcloud_logging.write_entries(entries, log_name: @log_name, resource: @resource)
+        gcloud_logging.write_entries(entries, log_name: @log_name, resource: resource)
       end
 
     end
