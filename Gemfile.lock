@@ -13,7 +13,7 @@ GIT
 PATH
   remote: .
   specs:
-    logging-google-cloud (1.0.0)
+    logging-google-cloud (1.0.1)
       gcloud (~> 0.6)
       logging (~> 2.0)
 

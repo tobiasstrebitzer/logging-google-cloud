@@ -87,7 +87,7 @@ module Logging
       end
       
       def send_entries(entries)
-        gcloud_logging.write_entries(entries, log_name: @log_name, resource: @resource)
+        gcloud_logging.write_entries(entries, log_name: @log_name, resource: resource)
       end
 
     end
